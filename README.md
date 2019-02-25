@@ -10,23 +10,23 @@ Checkout Demo at [Github pages](https://educationlink.github.io/vue-tel-input/).
 ## Installation
 - **yarn**:
   ```bash
-    yarn add vue-tel-input
+    yarn add vue-tel-input-fix
   ```
 - **npm**:
   ```bash
-    npm i --save vue-tel-input
+    npm i --save vue-tel-input-fix
   ```
 
 ## Usage
 - Import default `CSS` to your project:
     ```js
-    import 'vue-tel-input/dist/vue-tel-input.css';
+    import 'vue-tel-input-fix/dist/vue-tel-input.css';
     ```
 
 - Install as a global component:
     ```javascript
     import Vue from 'vue'
-    import VueTelInput from 'vue-tel-input'
+    import VueTelInput from 'vue-tel-input-fix'
 
     Vue.use(VueTelInput)
     ```
@@ -76,7 +76,7 @@ Checkout Demo at [Github pages](https://educationlink.github.io/vue-tel-input/).
   </template>
 
   <script>
-  import VueTelInput from 'vue-tel-input'
+  import VueTelInput from 'vue-tel-input-fix'
   import { abstractField } from 'vue-form-generator';
 
   export default {
@@ -94,7 +94,7 @@ Checkout Demo at [Github pages](https://educationlink.github.io/vue-tel-input/).
     import Vue from 'vue';
     import TelInput from '<path>/tel-input.vue';
 
-    import 'vue-tel-input/dist/vue-tel-input.css';
+    import 'vue-tel-input-fix/dist/vue-tel-input.css';
 
     Vue.component('field-tel-input', TelInput);
   ```
@@ -116,8 +116,8 @@ Read more on `vue-form-generator`'s [instruction page](https://icebob.gitbooks.i
   | Property value | Type | Default value | Description |
   | -------------- | ---- | ------------- | ----------- |
   | `defaultCountry` | `string` | `''` | Default country, will override the country fetched from IP address of user |
-  | `enableFlagsDropdown` | `Boolean` | false | Disable dropdown with country flags |
-  | `disabledFetchingCountry` | `Boolean` | false | Disable fetching current country based on IP address of user |
+  | `disabledFlagsDropdown` | `Boolean` | false | Disable dropdown with country flags |
+  | `disabledFetchingCountry` | `Boolean` | true | Disable fetching current country based on IP address of user |
   | `disabled` | `Boolean` | `false` | Disable input field |
   | `placeholder` | `string` | Enter a phone number | Placeholder for the input |
   | `required` | `Boolean` | `false` | Required property for HTML5 required attribute |
