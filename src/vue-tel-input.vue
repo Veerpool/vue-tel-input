@@ -1,6 +1,7 @@
 <template>
   <div class="vue-tel-input" :class="{ disabled: disabled }">
     <div
+      v-if="enableFlagsDropdown"
       class="dropdown"
       @click="toggleDropdown"
       v-click-outside="clickedOutside"
@@ -144,6 +145,10 @@ import getCountry from './assets/default-country';
 export default {
   name: 'vue-tel-input',
   props: {
+    enableFlagsDropdown: {
+      type: Boolean,
+      default: false,
+    },
     value: {
       type: String,
     },

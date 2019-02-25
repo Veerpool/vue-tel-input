@@ -1,14 +1,14 @@
 {
-  "name": "vue-tel-input",
+  "name": "vue-tel-input-fix",
   "version": "2.0.13",
   "description": "International Telephone Input with Vue",
-  "author": "Steven Dao <iamstevendao@gmail.com>",
+  "author": "Artem Ionov <veerpoolo@gmail.com>",
   "main": "dist/vue-tel-input.js",
   "license": "MIT",
   "homepage": "https://educationlink.github.io/vue-tel-input/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/EducationLink/vue-tel-input.git"
+    "url": "https://github.com/veerpool/vue-tel-input.git"
   },
   "scripts": {
     "dist": "poi build ./src/vue-tel-input.js --format umd --module-name VueTelInput --filename.js vue-tel-input.js --filename.css vue-tel-input.css --no-sourceMap --no-html",
