@@ -138,9 +138,9 @@ ul {
 </style>
 
 <script>
+  import getJSON from 'get-json';
 import { formatNumber, AsYouType, isValidNumber } from 'libphonenumber-js';
 import allCountries from './assets/all-countries';
-import getCountry from './assets/default-country';
 
 export default {
   name: 'vue-tel-input',
@@ -155,10 +155,6 @@ export default {
     placeholder: {
       type: String,
       default: 'Enter a phone number',
-    },
-    disabledFetchingCountry: {
-      type: Boolean,
-      default: true,
     },
     disabled: {
       type: Boolean,
@@ -312,14 +308,6 @@ export default {
        * 2. Use the first country from preferred list (if available) or all countries list
        */
       this.activeCountry = this.findCountry(this.preferredCountries[0]) || this.filteredCountries[0];
-      /**
-       * 3. Check if fetching country based on user's IP is allowed, set it as the default country
-       */
-      if (!this.disabledFetchingCountry) {
-        getCountry().then((res) => {
-          this.activeCountry = this.findCountry(res) || this.activeCountry;
-        });
-      }
     },
     /**
      * Get the list of countries from the list of iso2 code

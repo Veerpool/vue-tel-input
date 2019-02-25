@@ -1961,7 +1961,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
       }return Array.from(t);
     }var i = n(51),
         a = n(59),
-        o = n(60);e.a = { name: "vue-tel-input", props: { enableFlagsDropdown: { type: Boolean, default: !1 }, value: { type: String }, placeholder: { type: String, default: "Enter a phone number" }, disabledFetchingCountry: { type: Boolean, default: !1 }, disabled: { type: Boolean, default: !1 }, invalidMsg: { default: "", type: String }, required: { type: Boolean, default: !1 }, defaultCountry: { type: String, default: "" }, enabledFlags: { type: Boolean, default: !0 }, preferredCountries: { type: Array, default: function _default() {
+        o = n(60);e.a = { name: "vue-tel-input", props: { disabledFlagsDropdown: { type: Boolean, default: !1 }, value: { type: String }, placeholder: { type: String, default: "Enter a phone number" }, disabledFetchingCountry: { type: Boolean, default: !0 }, disabled: { type: Boolean, default: !1 }, invalidMsg: { default: "", type: String }, required: { type: Boolean, default: !1 }, defaultCountry: { type: String, default: "" }, enabledFlags: { type: Boolean, default: !0 }, preferredCountries: { type: Array, default: function _default() {
             return [];
           } }, onlyCountries: { type: Array, default: function _default() {
             return [];
@@ -1998,7 +1998,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         } }, methods: { initializeCountry: function initializeCountry() {
           var t = this;if (this.defaultCountry) {
             var e = this.findCountry(this.defaultCountry);if (e) return void (this.activeCountry = e);
-          }this.activeCountry = this.findCountry(this.preferredCountries[0]) || this.filteredCountries[0], this.disabledFetchingCountry || Object(o.a)().then(function (e) {
+          }this.activeCountry = this.findCountry(this.preferredCountries[0]) || this.filteredCountries[0], this.disabledFetchingCountry || this.disabledFlagsDropdown || Object(o.a)().then(function (e) {
             t.activeCountry = t.findCountry(e) || t.activeCountry;
           });
         }, getCountries: function getCountries() {
@@ -2610,7 +2610,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         a = n(105),
         o = n(50),
         d = r,
-        s = o(i.a, a.a, !1, d, "data-v-686d2b08", null);e.a = s.exports;
+        s = o(i.a, a.a, !1, d, "data-v-aa224e3c", null);e.a = s.exports;
   }, function (t, e) {}, function (t, e) {}, function (t, e) {
     t.exports = function (t, e, n, r, i, a) {
       var o,
@@ -4612,7 +4612,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
     var r = function r() {
       var t = this,
           e = t.$createElement,
-          n = t._self._c || e;return n("div", { staticClass: "vue-tel-input", class: { disabled: t.disabled } }, [t.enableFlagsDropdown ? n("div", { directives: [{ name: "click-outside", rawName: "v-click-outside", value: t.clickedOutside, expression: "clickedOutside" }], staticClass: "dropdown", class: { open: t.open }, attrs: { tabindex: "0" }, on: { click: t.toggleDropdown, keydown: [t.keyboardNav, function (e) {
+          n = t._self._c || e;return n("div", { staticClass: "vue-tel-input", class: { disabled: t.disabled } }, [t.disabledFlagsDropdown ? n("div", { directives: [{ name: "click-outside", rawName: "v-click-outside", value: t.clickedOutside, expression: "clickedOutside" }], staticClass: "dropdown", class: { open: t.open }, attrs: { tabindex: "0" }, on: { click: t.toggleDropdown, keydown: [t.keyboardNav, function (e) {
             if (!("button" in e) && t._k(e.keyCode, "esc", 27, e.key)) return null;t.reset(e);
           }] } }, [n("span", { staticClass: "selection" }, [t.enabledFlags ? n("div", { staticClass: "iti-flag", class: t.activeCountry.iso2.toLowerCase() }) : t._e(), t._v(" "), n("span", { staticClass: "dropdown-arrow" }, [t._v(t._s(t.open ? "▲" : "▼"))])]), t._v(" "), n("ul", { directives: [{ name: "show", rawName: "v-show", value: t.open, expression: "open" }], ref: "list" }, t._l(t.sortedCountries, function (e, r) {
         return n("li", { key: e.iso2 + (e.preferred ? "-preferred" : ""), staticClass: "dropdown-item", class: t.getItemClass(r, e.iso2), on: { click: function click(n) {

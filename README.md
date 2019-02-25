@@ -117,7 +117,6 @@ Read more on `vue-form-generator`'s [instruction page](https://icebob.gitbooks.i
   | -------------- | ---- | ------------- | ----------- |
   | `defaultCountry` | `string` | `''` | Default country, will override the country fetched from IP address of user |
   | `disabledFlagsDropdown` | `Boolean` | false | Disable dropdown with country flags |
-  | `disabledFetchingCountry` | `Boolean` | true | Disable fetching current country based on IP address of user |
   | `disabled` | `Boolean` | `false` | Disable input field |
   | `placeholder` | `string` | Enter a phone number | Placeholder for the input |
   | `required` | `Boolean` | `false` | Required property for HTML5 required attribute |
