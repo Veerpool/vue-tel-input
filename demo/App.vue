@@ -35,10 +35,11 @@ export default {
     };
   },
   methods: {
-    onInput({ number, isValid, country }) {
+    onInput({ number, isValid, country, id }) {
       this.phone.number = number;
       this.phone.isValid = isValid;
       this.phone.country = country && country.name;
+      console.log(id)
     },
   },
 };

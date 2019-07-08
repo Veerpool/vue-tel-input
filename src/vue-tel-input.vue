@@ -33,10 +33,12 @@
       ref="input"
       v-model="phone"
       type="tel"
+      :id="inputID"
       :placeholder="placeholder"
       :state="state"
       :formatter="format"
       :disabled="disabled"
+      @change="onChange"
       @blur="onBlur"
       @input="onInput"
       :required="required"
@@ -208,6 +210,7 @@ export default {
       selectedIndex: null,
       typeToFindInput: '',
       typeToFindTimer: null,
+      inputID: '',
     };
   },
   computed: {
@@ -276,6 +279,7 @@ export default {
         number,
         isValid: this.state,
         country: this.activeCountry,
+        id: this.inputID
       };
     },
   },
@@ -294,6 +298,9 @@ export default {
   },
   methods: {
     initializeCountry() {
+
+      this.inputID = Math.floor(Math.random() * new Date())
+
       /**
        * 1. Use default country if passed from parent
        */
@@ -344,6 +351,9 @@ export default {
     },
     onBlur() {
       this.$emit('onBlur');
+    },
+    onChange() {
+      this.$emit('onChange');
     },
     toggleDropdown() {
       if (this.disabled) {

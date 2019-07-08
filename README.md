@@ -129,7 +129,7 @@ Read more on `vue-form-generator`'s [instruction page](https://icebob.gitbooks.i
 
   | Property value | Arguments | Description |
   | -------------- | --------- | ----------- |
-  | `onInput` | `Object` | Fires when the input changes with the argument is the object includes `{ number, isValid, country }` |
+  | `onInput` | `Object` | Fires when the input changes with the argument is the object includes `{ number, isValid, country and id element }` |
   | `onValidate` | `Object` | Fires when the correctness of the phone number changes (from `true` to `false` or vice-versa) and when the component is mounted `{ number, isValid, country }` |
   | `onBlur` |  | Fires on blur event |
 
