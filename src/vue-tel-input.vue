@@ -38,8 +38,8 @@
       :state="state"
       :formatter="format"
       :disabled="disabled"
-      @change="onChange"
       @blur="onBlur"
+      @focus="onFocus"
       @input="onInput"
       :required="required"
     >
@@ -233,7 +233,7 @@ export default {
       }
 
       if (this.ignoredCountries.length) {
-        return allCountries.filter(({ iso2 }) => 
+        return allCountries.filter(({ iso2 }) =>
           !this.ignoredCountries.includes(iso2.toUpperCase()) &&
           !this.ignoredCountries.includes(iso2.toLowerCase()))
       }
@@ -285,6 +285,7 @@ export default {
   },
   watch: {
     state(value) {
+      console.log(295, this.phone)
       if (value && this.mode !== 'prefix') {
         // If mode is 'prefix', keep the number as user typed,
         // Otherwise format it
@@ -352,8 +353,8 @@ export default {
     onBlur() {
       this.$emit('onBlur');
     },
-    onChange() {
-      this.$emit('onChange');
+    onFocus() {
+      this.$emit('onFocus');
     },
     toggleDropdown() {
       if (this.disabled) {

@@ -1457,7 +1457,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         }, response: function response() {
           return { number: this.state ? this.formattedResult : this.phone, isValid: this.state, country: this.activeCountry, id: this.inputID };
         } }, watch: { state: function state(t) {
-          t && "prefix" !== this.mode && (this.phone = this.formattedResult), this.$emit("onValidate", this.response);
+          console.log(295, this.phone), t && "prefix" !== this.mode && (this.phone = this.formattedResult), this.$emit("onValidate", this.response);
         }, value: function value() {
           this.phone = this.value;
         } }, methods: { initializeCountry: function initializeCountry() {
@@ -1482,8 +1482,6 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
           this.$refs.input.setCustomValidity(this.response.isValid ? "" : this.invalidMsg), this.$emit("input", this.response.number), this.$emit("onInput", this.response);
         }, onBlur: function onBlur() {
           this.$emit("onBlur");
-        }, onChange: function onChange() {
-          this.$emit("onChange");
         }, toggleDropdown: function toggleDropdown() {
           this.disabled || (this.open = !this.open);
         }, clickedOutside: function clickedOutside() {
@@ -2340,7 +2338,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         a = n(95),
         o = n(45),
         d = r,
-        s = o(i.a, a.a, !1, d, "data-v-c6efaf98", null);e.a = s.exports;
+        s = o(i.a, a.a, !1, d, "data-v-0ccab604", null);e.a = s.exports;
   }, function (t, e) {}, function (t, e) {}, function (t, e) {
     t.exports = function (t, e, n, r, i, a) {
       var o,
@@ -4320,7 +4318,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
             }, mousemove: function mousemove(e) {
               t.selectedIndex = r;
             } } }, [t.enabledFlags ? n("div", { staticClass: "iti-flag", class: e.iso2.toLowerCase() }) : t._e(), t._v(" "), n("strong", [t._v(t._s(e.name))]), t._v(" "), n("span", [t._v("+" + t._s(e.dialCode))])]);
-      }))]) : t._e(), t._v(" "), n("input", { directives: [{ name: "model", rawName: "v-model", value: t.phone, expression: "phone" }], ref: "input", attrs: { type: "tel", id: t.inputID, placeholder: t.placeholder, state: t.state, formatter: t.format, disabled: t.disabled, required: t.required }, domProps: { value: t.phone }, on: { change: t.onChange, blur: t.onBlur, input: [function (e) {
+      }))]) : t._e(), t._v(" "), n("input", { directives: [{ name: "model", rawName: "v-model", value: t.phone, expression: "phone" }], ref: "input", attrs: { type: "tel", id: t.inputID, placeholder: t.placeholder, state: t.state, formatter: t.format, disabled: t.disabled, required: t.required }, domProps: { value: t.phone }, on: { blur: t.onBlur, input: [function (e) {
             e.target.composing || (t.phone = e.target.value);
           }, t.onInput] } })]);
     },
